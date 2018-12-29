@@ -16,3 +16,6 @@ $ source venv/bin/activate
 $ python3 spambot.py
 ```
 After that follow the terminal instructions.
+
+## End
+To end spambot you only need to press ESC button.

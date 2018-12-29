@@ -40,7 +40,7 @@ def run(text, button, msg, interval):
     interval - Interval between messages.
     """
     n = 1
-    while not keyboard.is_pressed('esc'):
+    while not keyboard.is_pressed('esc'): #Ends when esc is pressed
         pyautogui.click(text)
         pyautogui.typewrite(msg, interval=interval)
         pyautogui.click(button)
