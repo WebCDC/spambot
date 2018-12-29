@@ -2,19 +2,22 @@ import pyautogui, sys
 import keyboard
 import time
 
-print("Coordenadas da textbox do chat")
+print("Go to chat textbox")
 time.sleep(3)
 text = pyautogui.position()
-print("Coordenadas do botão de enviar")
-time.sleep(3)
-but = pyautogui.position()
+print("Chat position acquired: {}".format(text))
 
-print("Iniciar")
+print("Go to send button")
+time.sleep(3)
+button = pyautogui.position()
+print("Send button position acquired: {}".format(button))
+
+print("Starting...")
 n = 1
 
 while not keyboard.is_pressed('esc'):
-    pyautogui.click(text)#position of chatbox
+    pyautogui.click(text)
     pyautogui.typewrite("spam", interval=0.1)
-    pyautogui.click(but)#position of end button
-    print(n)
+    pyautogui.click(button)
+    print("Message number: {}".format(n))
     n += 1
