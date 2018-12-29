@@ -12,6 +12,7 @@ $ pip install -r requirements.txt
 To execute this code run it as root:
 ```
 $ sudo bash
+$ source venv/bin/activate
 $ python3 spambot.py
 ```
 After that follow the terminal instructions.
