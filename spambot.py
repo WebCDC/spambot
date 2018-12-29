@@ -14,7 +14,9 @@ def buttonCooordinates():
     print("Send button position acquired: {}".format(button))
     return button
 
-def run(text, button, msg):
+def run(text, button, msg, interval):
+    """
+    """
     n = 1
     while not keyboard.is_pressed('esc'):
         pyautogui.click(text)
@@ -24,8 +26,8 @@ def run(text, button, msg):
         n += 1
 
 msg = input("Message to spam: ")
-interval = input(float("Interval between messages: "))
+interval = float(input(("Interval between messages: ")))
 text = textboxCoordinates()
 button = buttonCooordinates()
 print("Running spambot")
-run(text, button, msg)
+run(text, button, msg, interval)
