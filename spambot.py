@@ -1,6 +1,13 @@
 import pyautogui, sys, keyboard, time
 
 def textboxCoordinates():
+    """
+    Function that returns textbox coordinates.
+    
+    Returns
+    -----
+    text - Textbox coordinates.
+    """
     print("Go to chat textbox")
     time.sleep(3)
     text = pyautogui.position()
@@ -8,6 +15,13 @@ def textboxCoordinates():
     return text
 
 def buttonCooordinates():
+    """
+    Function that returns send button coordinates.
+
+    Returns
+    -----
+    button - Send button coordinates.
+    """
     print("Go to send button")
     time.sleep(3)
     button = pyautogui.position()
@@ -16,6 +30,14 @@ def buttonCooordinates():
 
 def run(text, button, msg, interval):
     """
+    Function that does the spam of user messages.
+
+    Parameters
+    -----
+    text - Textbox position.
+    button - Send button position.
+    msg - Message to spam.
+    interval - Interval between messages.
     """
     n = 1
     while not keyboard.is_pressed('esc'):
@@ -25,9 +47,14 @@ def run(text, button, msg, interval):
         print("Message number:{}".format(n))
         n += 1
 
+#########################################################
+#                                                       #
+#                          MAIN                         #
+#                                                       #
+#########################################################
+
 msg = input("Message to spam: ")
 interval = float(input(("Interval between messages: ")))
 text = textboxCoordinates()
 button = buttonCooordinates()
-print("Running spambot")
 run(text, button, msg, interval)
