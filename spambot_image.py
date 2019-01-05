@@ -42,7 +42,7 @@ def run(text, button):
         pyautogui.click(text)
         pyautogui.hotkey('ctrl', 'v')
         pyautogui.click(button)
-        print("Message number:{}".format(n))
+        print("Image number:{}".format(n))
         n += 1
 
 #########################################################
