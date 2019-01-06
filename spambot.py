@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 import pyautogui, sys, keyboard, time
 
 def textboxCoordinates():
